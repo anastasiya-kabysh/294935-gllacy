@@ -155,8 +155,9 @@ body {
 }
 
 .user-block .basket {
-  padding: 10px 45px;
+  padding: 10px 34px;
   position: relative;
+  margin-right: 52px;
 }
 
 .user-block .basket:before {
@@ -187,10 +188,22 @@ body {
 
 .header-bottom adress {
   display: block;
+  color: #fff;
+  font-weight: bold;
 }
 
 .header-bottom .adress {
   display: block;
+}
+
+.adress.time-work {
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.adress.phone {
+  font-size: 22px;
+  line-height: 24px;
 }
 
 .slider {
@@ -275,27 +288,59 @@ body input[name="toggle"] {
 .benefits {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: flex-start;
   margin-bottom: 35px;
 }
 
 .benefits .promo {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
   width: 46.6%;
   margin: 0;
+  box-sizing: border-box;
   color: #fff;
+  font-size: 18px;
+  line-height: 22px;
+}
+
+.promo h3 {
+  margin: 0;
+  margin-bottom: 20px;
+  font-size: 35px;
+  line-height: 41px;
+}
+
+.promo p {
+  margin: 0;
+  margin-bottom: 45px;
+}
+
+.promo .btn {
+  padding: 15px 24px 15px 22px;
+  align-self: flex-end;
 }
 
 .benefits .promo-1 {
-  background: #b5214a url(../images/berries_background.jpg) repeat;
+  margin-right: 2.2%;
+  overflow: hidden;
+  background: #b5214a url(../images/berries_background.jpg) repeat 50% 50%;
+  ;
 }
 
 .benefits .promo-2 {
   background: #281108 url(../images/choco_background.jpg) repeat;
 }
 
+.list-main {
+  margin-bottom: 40px;
+}
+
 .list ul {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
   flex-direction: row;
   flex-wrap: wrap;
@@ -306,14 +351,16 @@ body input[name="toggle"] {
 .list .list-item {
   width: 22.25%;
   margin: 0;
+  margin-right: 2.2%;
   flex-grow: 0;
   flex-shrink: 0;
   list-style: none;
   position: relative;
 }
 
-.list .list-item img {
+.list-item img {
   border-radius: 50%;
+  z-index: 0;
 }
 
 .list-item .hit {
@@ -327,10 +374,118 @@ body input[name="toggle"] {
   #left: 0;
 }
 
+.list-item a {
+  display: block;
+  color: #fff;
+}
+
+.list-item .price {
+  position: absolute;
+  font-size: 42px;
+  line-height: 45px;
+  color: #fff;
+  font-weight: bold;
+  top: 59%;
+}
+
+.list-item .name {
+  margin: 0;
+  text-align: center;
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: bolder;
+  text-decoration: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.list-item .kilo {
+  font-size: 22px;
+}
+
 .about {
   display: block;
+  padding: 20px 30px;
   margin-bottom: 35px;
+  box-sizing: border-box;
+  font-size: 16px;
+  line-height: 22px;
   background: #eee3c7 url(../images/waffel_pattern.png) repeat 50% 50%;
+}
+
+.about .about-title {
+  margin: 0;
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: bolder;
+}
+
+.about-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+}
+
+.about-inner-left, .about-inner-right {
+  text-align: left;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.about-inner-left p, .about-inner-right p {
+  margin: 0;
+  padding-left: 55px;
+}
+
+.about-inner-left p:first-child, .about-inner-right p:first-child {
+  margin-bottom: 25px;
+}
+
+.about-inner-left {
+  margin-right: 35px;
+}
+
+.about-inner-left:before {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 49px;
+  height: 49px;
+  top: 7px;
+  left: -4%;
+  background: url(../images/ice_cream_icon.png) no-repeat 0 100%;
+}
+
+.about-inner-left::after {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 49px;
+  height: 49px;
+  top: 51%;
+  left: -4%;
+  background: url(../images/leaf-icon.png) no-repeat 0 50%;
+}
+
+.about-inner-right::before {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 49px;
+  height: 49px;
+  top: 7px;
+  left: -4%;
+  background: url(../images/caw_icon.png) no-repeat 0 100%;
+}
+
+.about-inner-right::after {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 49px;
+  height: 49px;
+  top: 51%;
+  left: -4%;
+  background: url(../images/termo_icon.png) no-repeat 0 50%;
 }
 
 .info {
