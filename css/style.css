@@ -74,8 +74,19 @@ body {
   flex-wrap: nowrap;
 }
 
+.header-content-left {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .main-logo {
   margin-right: 26px;
+}
+
+.catalog-logo {
+  margin: 10px;
 }
 
 .main-nav {
@@ -95,6 +106,7 @@ body {
 }
 
 .main-nav>li a {
+  display: inline-block;
   text-decoration: none;
   border-bottom: 1px solid rgba(255, 255, 255, 0.3);
   font-size: 16px;
@@ -103,13 +115,20 @@ body {
   color: #fff;
 }
 
-.main-nav-inner {
+.nav-inner {
   display: none;
   position: absolute;
   margin: 0;
   padding: 0;
   list-style: none;
   z-index: 10;
+}
+
+.catalog-nav-active {
+  padding: 10px 13px;
+  border: none;
+  background-color: #d07058;
+  border-radius: 100px;
 }
 
 .user-block {
@@ -123,6 +142,15 @@ body {
   margin-left: 10px;
   background-color: #a1b6aa;
   border-radius: 100px;
+}
+
+.user a {
+  display: block;
+  color: 14px;
+  font-weight: bold;
+  line-height: 16px;
+  color: #fff;
+  text-decoration: none;
 }
 
 .user-block .search {
@@ -171,13 +199,24 @@ body {
   left: 14px;
 }
 
-.user a {
+.catalog-basket .basket-active {
+  color: #000;
+}
+
+.user-block .catalog-basket {
+  background-color: #fff;
+}
+
+.user-block .catalog-basket::before {
+  position: absolute;
+  content: "";
   display: block;
-  color: 14px;
-  font-weight: bold;
-  line-height: 16px;
-  color: #fff;
-  text-decoration: none;
+  width: 21px;
+  height: 21px;
+  background-image: url(../images/basket_full_icon.png);
+  background-repeat: no-repeat;
+  top: 24%;
+  left: 14px;
 }
 
 .header-bottom {
@@ -188,6 +227,7 @@ body {
 .header-bottom adress {
   display: block;
   color: #fff;
+  text-align: right;
   font-weight: bold;
 }
 
@@ -196,6 +236,7 @@ body {
 }
 
 .adress.time-work {
+  margin-bottom: 10px;
   font-size: 14px;
   line-height: 16px;
 }
@@ -600,30 +641,49 @@ body input[name="toggle"] {
 .map .adress {
   display: block;
   width: 300px;
-  padding: 30px 25px;
+  padding: 30px 20px 30px 25px;
   position: absolute;
-  top: 20%;
-  left: 68%;
+  top: 2%;
+  left: 61.5%;
   text-align: left;
   background-color: #fff;
+  box-sizing: border-box;
 }
 
 .adress p {
   margin: 0;
-  margin-right: 33.33%;
-  margin-bottom: 25px;
-  font-size: 14px;
-  line-height: 20px;
+  margin-bottom: 20px;
 }
 
 .adress span {
   display: block;
+  font-size: 14px;
+}
+
+.adress .adress-office {
+  padding-right: 100px;
+}
+
+.adress .adress-point {
+  display: block;
+  margin: 0;
+  padding-right: 38px;
   font-size: 18px;
+  line-height: 24px;
   font-weight: bold;
 }
 
+.adress p:last-of-type {
+  line-height: 22px;
+}
+
+.adress .contact-time {
+  font-size: 18px;
+  padding-right: 118px;
+}
+
 .adress .adress-btn {
-  padding: 13px 28px;
+  padding: 10px 24px;
 }
 
 footer {
@@ -633,6 +693,8 @@ footer {
   flex-wrap: nowrap;
   justify-content: space-between;
   margin: 0 auto;
+  padding-top: 20px;
+  padding-bottom: 30px;
 }
 
 footer .footer-socials {
@@ -642,12 +704,14 @@ footer .footer-socials {
   align-items: center;
   justify-content: space-between;
   width: 16.33%;
+  padding-top: 15px;
 }
 
 .footer-socials .socials {
   width: 32px;
   height: 32px;
   border-radius: 50%;
+  border: 3px solid #c2cec7;
   font-size: 0;
   background-color: #fff;
   opacity: 0.8;
@@ -672,14 +736,70 @@ footer .footer-socials {
 footer .footer-about-us {
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
   align-items: center;
   justify-content: flex-start;
-  width: 33.33%;
+  width: 36.33%;
+}
+
+.footer-about-us .about-inner-left, .footer-about-us .about-inner-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding-top: 15px;
+}
+
+.footer-about-us a {
+  display: inline-block;
+  color: #fff;
+  font-size: 13px;
+  line-height: 18px;
+  text-decoration: none;
+  font-weight: 400;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.footer-about-us .about-active {
+  position: relative;
+  font-weight: 700;
+}
+
+.footer-about-us .about-active:before {
+  display: block;
+  width: 15px;
+  height: 13px;
+  position: absolute;
+  top: 2px;
+  left: -19px;
+  content: "";
+  background: url(../images/heart.png) no-repeat 0 100%;
 }
 
 footer .footer-copywrite {
-  width: 33.33%;
+  width: 24.33%;
+}
+
+.footer-copywrite .academy-logo {
+  display: block;
+  width: 108px;
+  height: 38px;
+  font-size: 0;
+  background-image: url(../images/lodo_html_academy.png);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  border: none;
+}
+
+.footer-copywrite p, .footer-copywrite a {
+  margin: 0;
+  font-size: 12px;
+  line-height: 18px;
+  color: #fff;
+}
+
+.footer-copywrite a {
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 .breadcrumbs {
@@ -687,6 +807,33 @@ footer .footer-copywrite {
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.breadcrumbs a {
+  display: inline-block;
+  color: #fff;
+  font-size: 14px;
+  line-height: 16px;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.breadcrumbs span {
+  margin: 0 5px;
+}
+
+.breadcrumbs .breadcrumbs-active {
+  border: none;
+}
+
+.catalog-filter h1 {
+  margin: 0;
+  margin-bottom: 35px;
+  color: #fff;
+  font-size: 35px;
+  line-height: 41px;
 }
 
 .form-filter {
@@ -694,6 +841,45 @@ footer .footer-copywrite {
   justify-content: row;
   flex-wrap: wrap;
   align-items: center;
+}
+
+.form-filter .filter {
+  border: none;
+}
+
+.filter legend {
+  margin: 0;
+  margin-bottom: 10px;
+  color: #fff;
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 500;
+}
+
+.filter-range .range-control {
+  position: relative;
+  background-color: #a1b6aa;
+  border-radius: 100px;
+}
+
+.range-control .scale {
+  height: 5px;
+  width: 190px;
+  background-color: #d1dad3;
+}
+
+.range-control .bar {
+  width: 70%;
+  height: 5px;
+  background-color: #f8f7f4;
+}
+
+.range-control .range-toggle {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  border-radius: 50%;
+  background-color: #fff;
 }
 
 .paginator {
