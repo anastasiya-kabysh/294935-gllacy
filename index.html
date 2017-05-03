@@ -24,25 +24,48 @@
                 <img src="images/logo.png" alt="Логотип сайта Глейси" width="154" height="64">
               </div>
               <nav>
-                <ul class="main-nav">
-                  <li><a href="#">Каталог  </a>
-                    <ul class="main-nav-inner">
-                      <li><a href="">Новинки</a></li>
-                      <li><a href="catalog.html">Сливочное</a></li>
-                      <li><a href="">Щербеты</a></li>
-                      <li><a href="">Фруктовый лед</a></li>
-                      <li><a href="">Мелорин</a></li>
-                    </ul>
+                <ul class="main-menu">
+                  <li class="menu-item"><a href="#"><span>Каталог</span></a>
+                    <div class="submenu-container">
+                      <ul class="submenu">
+                        <li class="submenu-item"><a href="#"><b>Новинки</b></a></li>
+                        <li class="submenu-item"><a href="catalog.html">Сливочное</a></li>
+                        <li class="submenu-item"><a href="#">Щербеты</a></li>
+                        <li class="submenu-item"><a href="#">Фруктовый лед</a></li>
+                        <li class="submenu-item"><a href="#">Мелорин</a></li>
+                      </ul>
+                    </div>
                   </li>
-                  <li><a href="#">Доставка и оплата</a></li>
-                  <li><a href="#">О компании</a></li>
+                  <li class="menu-item"><a href="#"><span>Доставка и оплата</span></a></li>
+                  <li class="menu-item"><a href="#"><span>О компании</span></a></li>
                 </ul>
               </nav>
             </div>
             <div class="user-block">
-              <div class="user search"></div>
-              <div class=" user entrance"><a href="#">Вход</a></div>
-              <div class="user basket"><a href="#">Пусто</a></div>
+              <div class="user user-search">
+                <div class="search"></div>
+                <div class="user-modal">
+                  <form action="" method="get" class="user-form form-search">
+                    <input type="search" name="search" id="search" placeholder="Что ищем?"><label for="search">Что ищем?</label>
+                  </form>
+                </div>
+              </div>
+              <div class="user user-entrance"><a href="#" class="entrance">Вход</a>
+                <div class="user-modal">
+                  <form action="" method="get" class="user-form form-entrance">
+                    <input type="email" name="email" placeholder="Электронная почта" id="email" requqred><label for="email">Электронная почта</label>
+                    <input type="password" name="password" placeholder="Пароль" id="password" requared><label for="passord">Пароль</label>
+                    <div class="form-entrance-down">
+                      <button type="submit" name="submit" value="Войти" class="btn btn-form-entrance">Войти</button>
+                      <div class="form-entrance-links">
+                        <a href="#">Забыли пароль?</a>
+                        <a href="#">Новая регистрация</a>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+              <div class="user user-basket"><a href="#" class="basket">Пусто</a></div>
             </div>
           </div>
           <div class="header-bottom">
@@ -192,6 +215,17 @@
         </footer>
       </div>
     </div>
+    <div class="feedback-modal-form">
+      <form action="index.html" method="post" class="user-form form-feedback">
+        <button type="button" name="modal-close" class="modal-close" title="Закрыть"></button>
+        <h2>Мы обязательно вам ответим!</h2>
+        <input type="text" name="name" id="name" placeholder="Как вас зовут?"><label for="name">Как вас зовут?</label>
+        <input type="text" name="contact" id="contact" placeholder="Ваша почта для ответа?"><label for="contact">Ваша почта для ответа?</label>
+        <textarea name="name" placeholder="Напишите что-нибудь..."></textarea>
+        <button type="button" name="button" class="btn btn-feedback">Отправить</button>
+      </form>
+    </div>
+    <div class="modal-overlay"></div>
   </body>
 
 </html>
