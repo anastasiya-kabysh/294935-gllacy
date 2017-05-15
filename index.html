@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="/css/normalize.css" type="text/css">
+    <link rel="stylesheet" href="css/normalize.css" type="text/css">
     <link rel="stylesheet" href="css/style.min.css" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;subset=cyrillic" rel="stylesheet">
     <title>Gllacy главная страница</title>
@@ -24,7 +24,7 @@
             </div>
             <nav>
               <ul class="main-menu">
-                <li class="menu-item"><a href="#"><span>Каталог</span></a>
+                <li class="menu-item"><a href="#">Каталог</a>
                   <div class="submenu-container">
                     <ul class="submenu">
                       <li class="submenu-item"><a href="#"><b>Новинки</b></a></li>
@@ -35,8 +35,8 @@
                     </ul>
                   </div>
                 </li>
-                <li class="menu-item"><a href="#"><span>Доставка и оплата</span></a></li>
-                <li class="menu-item"><a href="#"><span>О компании</span></a></li>
+                <li class="menu-item"><a href="#">Доставка и оплата</a></li>
+                <li class="menu-item"><a href="#">О компании</a></li>
               </ul>
             </nav>
             <div class="user-block">
@@ -164,7 +164,7 @@
                 <p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой не нужной ерунды. Честно =&#41;</p>
                 <form action="https://echo.htmlacademy.ru" method="post" class="subscribe-form">
                   <input type="email" name="email" placeholder="Электронная почта" required id="subscribe">
-                  <label for="subscribe">Электронная почта</label>
+                  <span class="subscribe-placeholder"><label for="subscribe">Электронная почта</label></span>
                   <button type="submit" class="btn subscribe-btn">Отправить</button>
                 </form>
               </div>
@@ -190,18 +190,18 @@
             <a href="#" class="socials socials-fb">Фейсбук</a>
             <a href="#" class="socials socials-vk">Вконтакте</a>
           </div>
-          <div class="footer-about-us">
-            <div class="about-us-left">
-              <a href="#" class="about-active">Для поставщиков</a>
-              <a href="#">О производстве</a>
-            </div>
-            <div class="about-us-right">
-              <a href="#">Наши документы</a>
-              <a href="#">Экологические стандарты</a>
-            </div>
-          </div>
+          <nav class="footer-about-us">
+            <ul class="footer-menu about-us-left">
+              <li><b><a href="#">Для поставщиков</a></b></li>
+              <li><a href="#">О производстве</a></li>
+            </ul>
+            <ul class="footer-menu about-us-right">
+              <li><a href="#">Наши документы</a></li>
+              <li><a href="#">Экологические стандарты</a></li>
+            </ul>
+          </nav>
           <div class="footer-copywrite">
-            <a href="https://htmlacademy.ru/intensive/htmlcss" class="academy-logo"><img src="images/lodo_html_academy.png" alt="Сайт HTML ACADEMY"></a>
+            <a href="https://htmlacademy.ru/intensive/htmlcss" class="academy-logo"><img src="images/lodo_html_academy.png" alt="Сайт HTML ACADEMY" width="108" height="38"></a>
             <p>Сделано&#160;в&#160;<a class="link" href="https://htmlacademy.ru/intensive/htmlcss">HTML&#160;Academy</a>&#160;©2017</p>
           </div>
         </footer>

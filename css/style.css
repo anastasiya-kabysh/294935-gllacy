@@ -739,26 +739,26 @@ body input[name="toggle"] {
   display: none;
 }
 
-#btn-1:checked~.site-wrapper {
+.slider #btn-1:checked~.site-wrapper {
   background-color: #849d8f;
   background-image: url("../images/slider-1.png");
 }
 
-#btn-2:checked~.site-wrapper {
+.slider #btn-2:checked~.site-wrapper {
   background-color: #8996a6;
   background-image: url("../images/slider-2.png");
 }
 
-#btn-3:checked~.site-wrapper {
+.slider #btn-3:checked~.site-wrapper {
   background-color: #9d8b84;
   background-image: url("../images/slider-3.png");
 }
 
-#btn-1:checked~.site-wrapper #slide1, #btn-2:checked~.site-wrapper #slide2, #btn-3:checked~.site-wrapper #slide3 {
+.slider #btn-1:checked~.site-wrapper .slide1, .slider #btn-2:checked~.site-wrapper .slide2, .slider #btn-3:checked~.site-wrapper .slide3 {
   display: block;
 }
 
-#btn-1:checked~.site-wrapper label[for="btn-1"], #btn-2:checked~.site-wrapper label[for="btn-2"], #btn-3:checked~.site-wrapper label[for="btn-3"] {
+.slider #btn-1:checked~.site-wrapper label[for="btn-1"], .slider #btn-2:checked~.site-wrapper label[for="btn-2"], .slider #btn-3:checked~.site-wrapper label[for="btn-3"] {
   background-color: #ffffff;
 }
 
@@ -1190,13 +1190,23 @@ body input[name="toggle"] {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  position: relative;
 }
 
-.subscribe input[type="email"] {
+.subscribe-form input[type="email"] {
   width: 367px;
   height: 43px;
   margin-right: 10px;
   padding-left: 9px;
+}
+
+.subscribe-form label {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
 }
 
 .subscribe .subscribe-btn {
