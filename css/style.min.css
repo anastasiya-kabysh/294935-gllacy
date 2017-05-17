@@ -1921,3 +1921,11 @@ hr.footer-divider {
   z-index: 40;
   background-color: rgba(0, 0, 0, .5)
 }
+
+.feedback-show {
+  display: block;
+}
+
+.overlay-show {
+  display: block;
+}

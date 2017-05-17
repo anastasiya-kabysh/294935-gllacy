@@ -218,6 +218,24 @@
         <div class="modal-overlay"></div>
       </div>
     </div>
+    <script type="text/javascript">
+      var button = document.querySelector(".adress-btn");
+      var feedback = document.querySelector(".feedback-modal-form");
+      var close = document.querySelector(".modal-close");
+      var overlay = document.querySelector(".modal-overlay");
+      button.addEventListener("click", function(evt) {
+        evt.preventDefault();
+        console.log("клик по ссылке");
+        feedback.classList.add("feedback-show");
+        overlay.classList.add("overlay-show");
+      });
+      close.addEventListener("click", function(evt) {
+        evt.preventDefault();
+        feedback.classList.remove("feedback-show");
+        overlay.classList.remove("overlay-show");
+      })
+
+    </script>
   </body>
 
 </html>
