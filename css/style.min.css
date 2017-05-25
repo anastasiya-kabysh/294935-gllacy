@@ -1924,8 +1924,118 @@ hr.footer-divider {
 
 .feedback-show {
   display: block;
+  animation: feedback 0.7s;
 }
 
 .overlay-show {
   display: block;
+  animation: overlay 0.7s;
+}
+
+@-webkit-keyframes feedback {
+  0% {
+    transform: translateY(-3000px);
+  }
+  70% {
+    transform: rotateY(30px);
+  }
+  85% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@-o-keyframes feedback {
+  0% {
+    transform: translateY(-3000px);
+  }
+  70% {
+    transform: rotateY(30px);
+  }
+  85% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@-moz-keyframes feedback {
+  0% {
+    transform: translateY(-3000px);
+  }
+  70% {
+    transform: rotateY(30px);
+  }
+  85% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes feedback {
+  0% {
+    transform: translateY(-3000px);
+  }
+  70% {
+    transform: rotateY(30px);
+  }
+  85% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@-webkit-keyframes overlay {
+  from {
+    opacity: 0.2
+  }
+  50% {
+    opacity: 0.3;
+  }
+  to {
+    opacity: 0.5
+  }
+}
+
+@-o-keyframes overlay {
+  from {
+    opacity: 0.2
+  }
+  50% {
+    opacity: 0.3;
+  }
+  to {
+    opacity: 0.5
+  }
+}
+
+@-moz-keyframes overlay {
+  from {
+    opacity: 0.2
+  }
+  50% {
+    opacity: 0.3;
+  }
+  to {
+    opacity: 0.5
+  }
+}
+
+@keyframes overlay {
+  from {
+    opacity: 0.2
+  }
+  50% {
+    opacity: 0.3;
+  }
+  to {
+    opacity: 0.5
+  }
 }
